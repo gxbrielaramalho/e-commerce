@@ -4,11 +4,18 @@ const itemSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    trim: true
   },
   price: {
     type: Number,
-    required: true,
+    required: true
+  },
+  quantity: {
+    type: Number,
+    required: true
   }
 });
 
-module.exports = mongoose.model('Item', itemSchema);
+const Item = mongoose.model('Item', itemSchema);
+
+module.exports = Item;

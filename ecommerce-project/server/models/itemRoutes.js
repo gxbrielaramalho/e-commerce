@@ -1,26 +1,67 @@
 const express = require('express');
 const router = express.Router();
-const Item = require('./item');
+const Item = require('server/models/Item.js');
 
-// Rota para criar um item
+// Criar um novo item
 router.post('/items', async (req, res) => {
-  const { name, price } = req.body;
   try {
-    const newItem = new Item({ name, price });
-    await newItem.save();
-    res.status(201).json(newItem);
+    const item = new Item(req.body);
+    await item.save();
+    res.status(201).send(item);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(400).send(error);
   }
 });
 
-// Rota para obter todos os itens
+// Obter todos os itens
 router.get('/items', async (req, res) => {
   try {
     const items = await Item.find();
-    res.json(items);
+    res.status(200).send(items);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).send(error);
+  }
+});
+
+// Obter um item pelo ID
+router.get('/items/:id', async (req, res) => {
+  try {
+    const item = await Item.findById(req.params.id);
+    if (!item) {
+      return res.status(404).send();
+    }
+    res.status(200).send(item);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+// Atualizar um item pelo ID
+router.patch('/items/:id', async (req, res) => {
+  try {
+    const item = await Item.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true
+    });
+    if (!item) {
+      return res.status(404).send();
+    }
+    res.status(200).send(item);
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+
+// Excluir um item pelo ID
+router.delete('/items/:id', async (req, res) => {
+  try {
+    const item = await Item.findByIdAndDelete(req.params.id);
+    if (!item) {
+      return res.status(404).send();
+    }
+    res.status(200).send(item);
+  } catch (error) {
+    res.status(500).send(error);
   }
 });
 

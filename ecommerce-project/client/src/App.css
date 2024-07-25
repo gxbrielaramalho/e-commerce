@@ -1,9 +1,14 @@
+* {
+  
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4; /* Cor de fundo clara */
+
 }
 
 .App {
@@ -11,14 +16,19 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
-  padding: 20px;
+  background-color: #003366; /* Azul Escuro */
   color: white;
+  padding: 20px;
   position: relative;
 }
 
 h1 {
   font-size: 2.5em;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2em;
 }
 
 .navbar {
@@ -29,38 +39,41 @@ h1 {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  text-align: center;
-  background-color: #444;
+  background-color: #0073e6; /* Azul Médio */
   border-radius: 10px;
+  display: inline-block;
 }
 
 .navbar .nav-item {
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #444;
+  padding: 15px 25px;
   color: white;
   font-weight: bold;
   cursor: pointer;
   border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .navbar .nav-item:hover {
-  background-color: #555;
+  background-color: #005bb5; /* Azul Escuro */
 }
 
 .navbar .dropdown {
   display: none;
   position: absolute;
-  background-color: #ffffff; /* Cor de fundo do dropdown para maior contraste */
+  background-color: #ffffff; /* Branco */
   border: 1px solid #ccc;
-  border-radius: 10px; /* Bordas arredondadas no submenu */
+  border-radius: 10px;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
   width: 200px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .navbar .dropdown li {
@@ -69,27 +82,35 @@ h1 {
 
 .navbar .dropdown li a {
   text-decoration: none;
-  color: #333;
+  color: #003366; /* Azul Escuro */
   display: block;
-  border-radius: 5px; /* Bordas arredondadas nos itens do submenu */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .navbar .dropdown li a:hover {
-  background-color: #ddd;
+  background-color: #e6f0ff; /* Azul Claro */
 }
 
 .navbar .nav-item:hover .dropdown {
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 main {
   padding: 20px;
 }
 
+.intro {
+  margin-bottom: 20px;
+}
+
 .products {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .product-item {
@@ -98,29 +119,68 @@ main {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 150px;
+  width: 200px;
   text-align: center;
   font-weight: bold;
 }
 
-p {
-  font-weight: 100;
+.product-item img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
 }
 
-h1 {
-  font-size: 15px;
+.product-item h3 {
+  margin: 10px 0;
+}
+
+.product-item p {
+  font-weight: 400;
+}
+
+.product-item h2 {
+  font-size: 1.5em;
+  color: #0073e6; /* Azul Médio */
 }
 
 .product-item:hover {
-  background-color: #000000;
+  background-color: #003366; /* Azul Escuro */
   color: white;
 }
 
+.additional-info {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e6f0ff; /* Azul Claro */
+  border-radius: 10px;
+}
+
+.additional-info img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.additional-info p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
 footer {
-  background-color: #282c34;
+  background-color: #003366; /* Azul Escuro */
   color: white;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
+  padding: 20px;
+  position: relative;
   bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #e6f0ff; /* Azul Claro */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

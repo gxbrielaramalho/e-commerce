@@ -13,7 +13,7 @@ function App() {
           <h2>Produtos</h2>
           <div className="product-item">
             <h3>Produto 1</h3>
-            <p>lorem lorem lorem lorem</p>
+            <p>Descrição do produto 1.</p>
           </div>
           <div className="product-item">
             <h3>Produto 2</h3>

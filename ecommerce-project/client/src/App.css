@@ -14,10 +14,72 @@ body {
   background-color: #282c34;
   padding: 20px;
   color: white;
+  position: relative;
 }
 
 h1 {
   font-size: 2.5em;
+}
+
+.navbar {
+  margin-top: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: #444;
+  border-radius: 10px;
+}
+
+.navbar .nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.navbar .nav-item:hover {
+  background-color: #555;
+}
+
+.navbar .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ffffff; /* Cor de fundo do dropdown para maior contraste */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Bordas arredondadas no submenu */
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.navbar .dropdown li {
+  padding: 10px;
+}
+
+.navbar .dropdown li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  border-radius: 5px; /* Bordas arredondadas nos itens do submenu */
+}
+
+.navbar .dropdown li a:hover {
+  background-color: #ddd;
+}
+
+.navbar .nav-item:hover .dropdown {
+  display: block;
 }
 
 main {
@@ -43,6 +105,15 @@ main {
 
 p {
   font-weight: 100;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+.product-item:hover {
+  background-color: #000000;
+  color: white;
 }
 
 footer {

@@ -5,22 +5,24 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Bem-vindo ao meu primeiro E-commerce!</h1>
-        <p>Em construção...</p>
+        <h1>Bem-vindo ao meu E-commerce!</h1>
       </header>
       <main>
         <div className="products">
-          <h2>Produtos</h2>
-          <div className="product-item">
-            <h3>Produto 1</h3>
-            <p>lorem lorem lorem lorem</p>
+          <div className="product-item">Produto 1
+            <p>Características do produto...</p>
+            <h1>R$ 99,00</h1>
           </div>
-          <div className="product-item">
-            <h3>Produto 2</h3>
-            <p>Descrição do produto 2.</p>
-          </div>
+          
+          <div className="product-item">Produto 2</div>
+          <div className="product-item">Produto 3</div>
+          <div className="product-item">Produto 4</div>
+          <div className="product-item">Produto 5</div>
         </div>
       </main>
+      <footer>
+        <p>&copy; 2024 Meu E-commerce. Todos os direitos reservados.</p>
+      </footer>
     </div>
   );
 }

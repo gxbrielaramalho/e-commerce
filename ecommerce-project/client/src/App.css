@@ -1,13 +1,11 @@
-* {
-  
-}
+
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f4f4f4; /* Cor de fundo clara */
+  background-color: #ffffff; /* Cor de fundo clara */
 
 }
 
@@ -16,7 +14,7 @@ body {
 }
 
 .App-header {
-  background-color: #003366; /* Azul Escuro */
+  background-color: #000000; /* Azul Escuro */
   color: white;
   padding: 20px;
   position: relative;
@@ -29,17 +27,18 @@ h1 {
 
 p {
   font-size: 1.2em;
+  color:#ffffff;
 }
 
 .navbar {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .navbar ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background-color: #0073e6; /* Azul Médio */
+  background-color: #000000; /* Azul Médio */
   border-radius: 10px;
   display: inline-block;
 }
@@ -82,7 +81,7 @@ p {
 
 .navbar .dropdown li a {
   text-decoration: none;
-  color: #003366; /* Azul Escuro */
+  color: #000000; /* Azul Escuro */
   display: block;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -140,18 +139,20 @@ main {
 
 .product-item h2 {
   font-size: 1.5em;
-  color: #0073e6; /* Azul Médio */
+  color: #000000; /* Azul Médio */
 }
 
+
+
 .product-item:hover {
-  background-color: #003366; /* Azul Escuro */
+  background-color: #005bb5; /* Azul Escuro */
   color: white;
 }
 
 .additional-info {
   margin-top: 20px;
   padding: 20px;
-  background-color: #e6f0ff; /* Azul Claro */
+  background-color: #000000; /* Azul Claro */
   border-radius: 10px;
 }
 
@@ -167,7 +168,7 @@ main {
 }
 
 footer {
-  background-color: #003366; /* Azul Escuro */
+  background-color: #005bb5; /* Azul Escuro */
   color: white;
   padding: 20px;
   position: relative;
